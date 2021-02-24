@@ -7,7 +7,7 @@
 .topbar-container{
 	width: 100%;
 	height: 60px;
-	background: url(../../static/img/headerBg.png);
+	background: url(../../common/static/img/headerBg.png);
 	background-size: 100%;
 }
 

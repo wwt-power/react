@@ -1,6 +1,8 @@
 import { Component,Fragment } from "react";
 import { Form, Input, Button } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+// 登录API
+import {requestlogin} from "../../common/api/login.js"
 
 export default class LoginForm extends Component{
     state = {
@@ -13,6 +15,11 @@ export default class LoginForm extends Component{
 
     onFinish = (form) =>{
         console.log(this.props);
+		requestlogin().then(res =>{
+			console.log(JSON.stringify(res));
+		})
+		
+		return
         this.props.history.push("/home");
     }
     

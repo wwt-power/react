@@ -1,6 +1,6 @@
 import {Component,Fragment} from "react";
 // logo
-import logotxt from "../../static/img/logo_txt.png";
+import logotxt from "../../common/static/img/logo_txt.png";
 import "./layout.css"
 // 图片
 import policePortrait from "../../common/static/img/police_portrait.png"

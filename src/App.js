@@ -1,6 +1,6 @@
 import {Component,Fragment} from 'react';
 import {BrowserRouter,Switch,Route} from 'react-router-dom'
-import "./static/style/index.css"
+import "./common/static/style/index.css"
 import Loagin from "./views/login/Login"
 import Home from "./views/page/home/Home"
 import Welcome from "./views/Welcome"
