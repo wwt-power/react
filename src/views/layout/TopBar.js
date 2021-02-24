@@ -3,10 +3,10 @@ import {Component,Fragment} from "react";
 import logotxt from "../../static/img/logo_txt.png";
 import "./layout.css"
 // 图片
-import policePortrait from "../../static/img/police_portrait.png"
-import refreshIcon from "../../static/img/home_refresh.png"
-import exitIcon from "../../static/img/home_exit.png"
-import helpIcon from "../../static/img/home_help.png"
+import policePortrait from "../../common/static/img/police_portrait.png"
+import refreshIcon from "../../common/static/img/home_refresh.png"
+import exitIcon from "../../common/static/img/home_exit.png"
+import helpIcon from "../../common/static/img/home_help.png"
 
 export default class SideBar extends Component{
 	render(){

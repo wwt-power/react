@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import {Menu} from 'antd';
 // 图片
-import figure from "../../static/img/figure.png"
+import figure from "../../common/static/img/figure.png"
 // 图标字体
 import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
 // 二级菜单
