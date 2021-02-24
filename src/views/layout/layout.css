@@ -1,6 +1,7 @@
 /* header头部 */
 .ant-layout-header{
 	height: 60px;
+	line-height: normal;
 	padding: 0px;
 }
 .topbar-container{
@@ -78,5 +79,64 @@
 .sRight {
     right: 0;
 }
+
+dl.homeHeader {
+	padding: 10px 50px 0px 26px;
+}
+dl.homeHeader img{
+	display: block;
+	border: none;
+}
+dl.homeHeader dd{
+	float:left;
+}
+dl.homeHeader dd img{
+	height: 40px;
+}
+dl.homeHeader dt{
+	float:right;
+}
+dl.homeHeader dt ul li{
+	float: left;
+	margin-left: 50px;
+	position: relative;
+}
+.homeHeaderOperationBtn{
+	cursor: pointer;
+}
+.homeHeaderOperationBtn img{
+	width: 20px;
+	margin: auto;
+}
+.homeHeaderOperationBtn h4{
+	font-weight: normal;
+	font-size: 14px;
+	height: 18px;
+	line-height: 18px;
+	padding-top: 6px;
+	color: #FEFEFE;
+}
+.logPeopleInfo{
+	
+}
+.logPeopleInfo img{
+	width: 40px;
+}
+.logPeopleInfo img , .logPeopleInfoWord{
+	float: left;
+}
+.logPeopleInfoWord h5 , .logPeopleInfoWord h6{
+	padding-left: 18px;
+	font-weight: normal;
+	font-size: 14px;
+	color: #FFFFFF;
+	line-height: 16px;
+	height: 16px;
+}
+.logPeopleInfoWord h5{
+	margin: 3px 0px 4px 0px;
+}
+
+/* 首页  ************************  header  ***************************** 结束 */
 
 

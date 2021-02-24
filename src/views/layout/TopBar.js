@@ -2,46 +2,50 @@ import {Component,Fragment} from "react";
 // logo
 import logotxt from "../../static/img/logo_txt.png";
 import "./layout.css"
+// 图片
+import policePortrait from "../../static/img/police_portrait.png"
+import refreshIcon from "../../static/img/home_refresh.png"
+import exitIcon from "../../static/img/home_exit.png"
+import helpIcon from "../../static/img/home_help.png"
 
 export default class SideBar extends Component{
 	render(){
 		return(
 			<Fragment>
 				<div className="topbar-container">
-					<dl className="homeHeader">
+					<dl className="homeHeader clearfix">
 						<dd>
-							<img src={logotxt} />
+							<img src={logotxt}  alt="logotxt" />
 						</dd>
 						<dt>
-							<ul className="clear">
+							<ul className="clearfix">
 								<li>
-									123
-									// <div className="logPeopleInfo">
-									// 	<img src="@assets/static/img/police_portrait.png">
-									// 	<div className="logPeopleInfoWord">
-									// 		<h5>{{userinfo.gajgMc}}</h5>
-									// 		<h6>{{userinfo.realName}}<span style="padding-left: 20px;">{{userinfo.jh}}</span></h6>
-									// 	</div>
-									// </div>
+									<div className="logPeopleInfo clearfix">
+										<img src={policePortrait} alt="头像" />
+										<div className="logPeopleInfoWord">
+											<h5>三角城派出所</h5>
+											<h6>超级管理员<span>admin</span></h6>
+										</div>
+									</div>
 								</li>
-								// <li>
-								// 	<div className="homeHeaderOperationBtn" v-on:click="curRefresh">
-								// 		<img src="@assets/static/img/home_refresh.png">
-								// 		<h4>刷新</h4>
-								// 	</div>
-								// </li>
-								// <li>
-								// 	<div className="homeHeaderOperationBtn" @click="loginOut">
-								// 		<img src="@assets/static/img/home_exit.png">
-								// 		<h4>退出</h4>
-								// 	</div>
-								// </li>
-								// <li>
-								// 	<div className="homeHeaderOperationBtn">
-								// 		<img src="@assets/static/img/home_help.png">
-								// 		<h4>帮助</h4>
-								// 	</div>
-								// </li>
+								<li>
+									<div className="homeHeaderOperationBtn">
+										<img src={refreshIcon} alt="刷新" />
+										<h4>刷新</h4>
+									</div>
+								</li>
+								<li>
+									<div className="homeHeaderOperationBtn">
+										<img src={exitIcon} alt="退出" />
+										<h4>退出</h4>
+									</div>
+								</li>
+								<li>
+									<div className="homeHeaderOperationBtn">
+										<img src={helpIcon} alt="帮助" />
+										<h4>帮助</h4>
+									</div>
+								</li>
 							</ul>
 						</dt>
 					</dl>

@@ -26,8 +26,8 @@ export default class SideBar extends Component {
 				<div className="sidebarHead">
 				  <span>
 					窗口办理
-					<img src={figure} className="sLeft" />
-					<img src={figure} className="sRight" />
+					<img src={figure} className="sLeft" alt="figure" />
+					<img src={figure} className="sRight" alt="figure" />
 				  </span>
 				</div>
 				<Menu
