@@ -1,0 +1,82 @@
+/* header头部 */
+.ant-layout-header{
+	height: 60px;
+	padding: 0px;
+}
+.topbar-container{
+	width: 100%;
+	height: 60px;
+	background: url(../../static/img/headerBg.png);
+	background-size: 100%;
+}
+
+/* 菜单栏 */
+.ant-layout /deep/ .ant-layout-sider{
+	padding: 10px 12px;
+	background: #394053;
+}
+/* 修改菜单颜色 */
+/* 第一级菜单 */
+.layout-wrap{
+	height: 100vh;
+}
+.sidebarModule .ant-menu{
+	background: transparent;
+}
+.ant-menu-inline .ant-menu-submenu{
+	background: #394053;
+	margin-bottom: 2px;
+}
+.ant-menu-inline .ant-menu-submenu .ant-menu-submenu-title{
+	padding: 0px 20px;
+	margin: 0;
+	height: 30px;
+	line-height: 30px;
+}
+/* 二级菜单 */
+.ant-menu-dark .ant-menu-inline.ant-menu-sub{
+	background: #5d657b;
+}
+.ant-menu-sub.ant-menu-inline > .ant-menu-item{
+	height: 30px;
+	line-height: 30px;
+}
+/* 当前选中的菜单项 */
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background: none;
+    color: #10b9d3;
+}
+/* 模块头部 */
+.sidebarModule{
+	padding: 10px 15px;
+	background: rgba(93,101,123,.6);
+	border-radius: 3px;
+}
+.sidebarHead{
+	margin-bottom: 10px;
+}
+.sidebarHead span {
+    height: 17px;
+    line-height: 17px;
+    padding: 0 13px;
+    font-weight: 400;
+    font-size: 17px;
+    position: relative;
+    color: #fff;
+	display: inline-block;
+}
+.sLeft, .sRight {
+    position: absolute;
+    top: 2px;
+    display: block;
+    border: none;
+    height: 16px;
+}
+.sLeft {
+    left: 0;
+}
+.sRight {
+    right: 0;
+}
+
+
