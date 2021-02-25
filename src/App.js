@@ -1,10 +1,11 @@
 import {Component,Fragment} from 'react';
 import {BrowserRouter,Switch,Route} from 'react-router-dom'
-import "./common/static/style/index.css"
-import Loagin from "./views/login/Login"
-import Home from "./views/page/home/Home"
-import Welcome from "./views/Welcome"
-import Index from "./views/layout/Index"
+import "@static/style/reset.css"
+import "@static/style/cattle.css"
+import Loagin from "@views/login/Login"
+import Home from "@views/page/home/Home"
+import Welcome from "@views/Welcome"
+import Index from "@views/layout/Index"
 
 class App extends Component{
   render(){

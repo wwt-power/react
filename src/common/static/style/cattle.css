@@ -1,0 +1,15 @@
+#root{
+    width: 100%;
+    height: 100%;
+}
+/* 牛年大吉 */
+.cattleGoodLuck{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.cattleGoodLuck img{
+	height: 90%;
+	display: block;
+	margin: 1% auto;
+}

@@ -2,7 +2,7 @@ import { Component,Fragment } from "react";
 import { Form, Input, Button } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 // 登录API
-import {requestlogin} from "../../common/api/login.js"
+import {requestlogin} from "@api/login.js"
 
 export default class LoginForm extends Component{
     state = {
