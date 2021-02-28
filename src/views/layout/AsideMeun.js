@@ -1,4 +1,5 @@
 import React,{Component,Fragment} from "react";
+import {Link} from "react-router-dom";
 import {Menu} from 'antd';
 // 导入路由
 import Router from "@common/router/Index.js"
@@ -18,12 +19,12 @@ export default class AsideMenu extends Component {
 		console.log(Router);
 	}
 	
-	handleClick = e => {
-		console.log('click ', e);
-		this.setState({
-			current: e.key,
-		});
-	};
+	// handleClick = e => {
+	// 	console.log('click ', e);
+	// 	this.setState({
+	// 		current: e.key,
+	// 	});
+	// };
 	
 	// 有子级菜单
 	renderSubMenu = (data) => {
@@ -40,7 +41,11 @@ export default class AsideMenu extends Component {
 	
 	// 无子级菜单
 	renderMenu = ({key,title}) =>{
-		return <Menu.Item key={key} >{title}</Menu.Item>
+		return(
+			<Menu.Item key={key} >
+				<Link to={key}>{title}</Link>
+			</Menu.Item>
+		)
 	}
 	
 	render() {
@@ -48,7 +53,6 @@ export default class AsideMenu extends Component {
 			<Fragment>
 				<Menu
 					theme={this.state.theme}
-					onClick={this.handleClick}
 					defaultOpenKeys={['sub1']}
 					selectedKeys={[this.state.current]}
 					mode="inline"

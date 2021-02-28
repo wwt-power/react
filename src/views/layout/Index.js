@@ -5,6 +5,7 @@ import "./layout.css"
 // 侧边栏
 import SideBar from "./SideBar" 
 import TopBar from "./TopBar"
+import ContainerMain from "@common/router/ContainerMain.js"
 
 const { Header, Sider, Content } = Layout;
 
@@ -21,7 +22,7 @@ export default class Index extends Component{
 				        	<SideBar />
 				        </Sider>
 				        <Content>
-							Content
+							<ContainerMain />
 						</Content>
 					</Layout>
 				</Layout>

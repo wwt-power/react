@@ -19,7 +19,7 @@ export default class LoginForm extends Component{
 			console.log(JSON.stringify(res));
 		})
 		
-		return
+		//return
         this.props.history.push("/home");
     }
     
