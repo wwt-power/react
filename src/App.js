@@ -13,8 +13,8 @@ class App extends Component{
       <Fragment>
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" component={Welcome} />
-			<Route exact path="/index" component={Index} />
+			<Route exact path="/" component={Index} />
+            <Route exact path="/welcome" component={Welcome} />
             <Route path="/home" component={Home} />
             <Route path="/login" component={Loagin} />
           </Switch>  

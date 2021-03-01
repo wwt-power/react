@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import {BrowserRouter,Switch,Route} from "react-router-dom";
+import {Switch,Route} from "react-router-dom";
 // 私有组件方法
 import PrivateRouter from "@common/router/PrivateRouter.js"
 // page
@@ -15,12 +15,10 @@ export default class ContainerMain extends Component {
 	
 	render() {
 		return (
-			<BrowserRouter>
-				<Switch>
-					<Route path="/index/user/list" exact component={UserList} />
-					<PrivateRouter exact path="/index/user/add" component={UserAdd} />
-				</Switch>
-			</BrowserRouter>
+			<Switch>
+				<Route exact path="/user/list" component={UserList} />
+				<PrivateRouter exact path="/user/add" component={UserAdd} />
+			</Switch>
 		);
 	}
 }

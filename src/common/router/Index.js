@@ -1,21 +1,21 @@
 const router =[
 	{
 		title:"控制台",
-		icon:"index",
-		key:"/index"
+		icon:"control",
+		key:"/control"
 	},
 	{
 		title:"用户管理",
 		icon:"laptop",
-		key:"/index/user",
+		key:"/user",
 		subs:[
 			{
-				key:"/index/user/list",
+				key:"/user/list",
 				title:"用户列表",
 				icon:""
 			},
 			{
-				key:"/index/user/add",
+				key:"/user/add",
 				title:"添加用户",
 				icon:""
 			},
