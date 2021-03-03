@@ -8,7 +8,7 @@ import TopBar from "./TopBar"
 import ContainerMain from "@common/router/ContainerMain.js"
 
 //路由
-import {BrowserRouter} from 'react-router-dom';
+import {HashRouter} from 'react-router-dom';
 
 const { Header, Sider, Content } = Layout;
 
@@ -16,7 +16,7 @@ export default class Index extends Component{
 	render(){
 		return(
 			<Fragment>
-				<BrowserRouter>
+				<HashRouter>
 					<Layout className="layout-wrap">
 						<Header>
 							<TopBar />
@@ -30,7 +30,7 @@ export default class Index extends Component{
 							</Content>
 						</Layout>
 					</Layout>
-				</BrowserRouter>
+				</HashRouter>
 			</Fragment>
 		)
 	}
