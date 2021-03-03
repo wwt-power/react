@@ -1,5 +1,5 @@
 import React,{Component,Fragment} from "react";
-import {Link} from "react-router-dom";
+import {Link,withRouter} from "react-router-dom";
 import {Menu} from 'antd';
 // 导入路由
 import Router from "@common/router/Index.js"
@@ -9,22 +9,23 @@ import { AppstoreOutlined } from '@ant-design/icons';
 const {SubMenu} = Menu;
 
 
-export default class AsideMenu extends Component {
+class AsideMenu extends Component {
 	constructor(props){
 		super(props);
 		this.state ={
 			theme: 'dark',//light  主题色
 			current: '1',
-		};
-		console.log(Router);
+			openKeys:[],	//当前展开的 SubMenu 菜单项 key 数组
+			selectedKeys:[]	//当前选中的菜单项 key 数组
+		}
 	}
 	
-	// handleClick = e => {
-	// 	console.log('click ', e);
-	// 	this.setState({
-	// 		current: e.key,
-	// 	});
-	// };
+	handleClick = e => {
+		console.log('click ', e);
+		this.setState({
+			current: e.key,
+		});
+	};
 	
 	// 有子级菜单
 	renderSubMenu = (data) => {
@@ -47,15 +48,26 @@ export default class AsideMenu extends Component {
 			</Menu.Item>
 		)
 	}
+	// 组件挂载完成时触发的函数
+	componentDidMount(){
+		const pathname = this.props.location.pathname;
+		const openkey = pathname.split("/").slice(0,2).join('/');
+		this.setState({
+			openKeys:openkey,
+			selectedKeys:pathname
+		})
+	}
 	
 	render() {
+		const {theme,openKeys,selectedKeys} = this.state;
 		return (
 			<Fragment>
 				<Menu
-					theme={this.state.theme}
-					defaultOpenKeys={['sub1']}
-					selectedKeys={[this.state.current]}
+					theme={theme}
+					defaultOpenKeys={openKeys}
+					defaultSelectedKeys={selectedKeys}
 					mode="inline"
+					onClick={this.handleClick}
 				>
 					{
 						Router && Router.map((firstItem) =>{
@@ -67,3 +79,5 @@ export default class AsideMenu extends Component {
 		);
 	}
 }
+
+export default withRouter(AsideMenu);
