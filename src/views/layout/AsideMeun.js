@@ -14,19 +14,10 @@ class AsideMenu extends Component {
 		super(props);
 		this.state ={
 			theme: 'dark',//light  主题色
-			current: '1',
 			openKeys:[],	//当前展开的 SubMenu 菜单项 key 数组
 			selectedKeys:[]	//当前选中的菜单项 key 数组
 		}
-	}
-	
-	handleClick = e => {
-		console.log('click ', e);
-		this.setState({
-			current: e.key,
-		});
-	};
-	
+	}	
 	// 有子级菜单
 	renderSubMenu = (data) => {
 		return(
@@ -39,7 +30,6 @@ class AsideMenu extends Component {
 			</SubMenu>
 		)
 	}
-	
 	// 无子级菜单
 	renderMenu = ({key,title}) =>{
 		return(
@@ -57,6 +47,17 @@ class AsideMenu extends Component {
 			selectedKeys:pathname
 		})
 	}
+	// 点击项切换当前状态
+	handleClick = ({ item, key, keyPath, domEvent }) => {
+		this.setState({
+			openKeys:keyPath[keyPath.length-1],
+			selectedKeys:key
+		})
+	};
+	// SubMenu 展开/关闭的回调
+	handleChange = (openKeys) => {
+		console.log(openKeys);
+	}
 	
 	render() {
 		const {theme,openKeys,selectedKeys} = this.state;
@@ -65,9 +66,10 @@ class AsideMenu extends Component {
 				<Menu
 					theme={theme}
 					defaultOpenKeys={openKeys}
-					defaultSelectedKeys={selectedKeys}
+					selectedKeys={selectedKeys}
 					mode="inline"
 					onClick={this.handleClick}
+					onOpenChange={this.handleChange}
 				>
 					{
 						Router && Router.map((firstItem) =>{
